@@ -1,0 +1,7 @@
+query {
+    allCustomers {
+        username
+        name
+        dateCreated
+    }
+}

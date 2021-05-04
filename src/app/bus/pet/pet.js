@@ -3,6 +3,7 @@ import { Counter } from "./counter";
 import { List } from "./list";
 import { SpecialList } from "./specialList";
 import styled from "styled-components";
+import { Profile } from "./profile";
 
 export const Pet = () => {
   return (
@@ -11,6 +12,7 @@ export const Pet = () => {
       <Counter />
       <List />
       <SpecialList />
+      <Profile />
     </Wrapper>
   );
 };

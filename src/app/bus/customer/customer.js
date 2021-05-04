@@ -2,12 +2,13 @@ import React from "react";
 import { List } from "./list";
 import styled from "styled-components";
 import { useCustomer } from "./hooks/useCustomer/useCustomer";
+import {LoginForm} from "./loginForm";
 
 export const Customer = () => {
   const { values, handleChange, save, createdAccount} = useCustomer();
-    console.log(createdAccount)
   return (
     <Wrapper>
+        <LoginForm/>
         <FormWrap>
             <span>Sing in</span>
             <input type="text" placeholder={"name"} name={"name"} onChange={handleChange}/>
@@ -25,7 +26,7 @@ const Wrapper = styled.div`
   width: 40%;
 `;
 
-const FormWrap = styled.div`
+export const FormWrap = styled.div`
   display: flex;
   flex-flow: column nowrap;
   align-items: center;

@@ -3,7 +3,15 @@ import { FormWrap } from "./customer";
 import { useCustomerAuth } from "./hooks/useCustomerAuth/useCustomerAuth";
 
 export const LoginForm = () => {
-  const {handleChange, logIn} = useCustomerAuth();
+  const {handleChange, logIn, authorizedCustomer} = useCustomerAuth();
+
+  const authorizedCustomerJSX = authorizedCustomer && (
+      <>
+          <p>
+              Authorized customer: {authorizedCustomer.username}
+          </p>
+      </>
+  )
 
   // if (loading) return <p>Loading...</p>;
   // if (error) return <p>{error.message}</p>;
@@ -27,11 +35,7 @@ export const LoginForm = () => {
       <button onClick={logIn} type={"submit"}>
         Login
       </button>
-      {/*{loginUserData ? (*/}
-      {/*  <div style={{ color: "green" }}>*/}
-      {/*    Welcome /!*{loginUserData.customer.name}*!/*/}
-      {/*  </div>*/}
-      {/*) : null}*/}
+      {authorizedCustomerJSX}
     </FormWrap>
   );
 };

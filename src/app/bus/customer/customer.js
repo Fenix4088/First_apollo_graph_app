@@ -2,13 +2,12 @@ import React from "react";
 import { List } from "./list";
 import styled from "styled-components";
 import { useCustomer } from "./hooks/useCustomer/useCustomer";
-import {LoginForm} from "./loginForm";
 
 export const Customer = () => {
   const { values, handleChange, save, createdAccount} = useCustomer();
   return (
     <Wrapper>
-        <LoginForm/>
+        {/*<LoginForm/>*/}
         <FormWrap>
             <span>Sing in</span>
             <input type="text" placeholder={"name"} name={"name"} onChange={handleChange}/>

@@ -8,7 +8,7 @@ export const LoginForm = () => {
   const authorizedCustomerJSX = authorizedCustomer && (
       <>
           <p>
-              Authorized customer: {authorizedCustomer.username}
+              Authorized customer: {authorizedCustomer.customer.username}
           </p>
       </>
   )

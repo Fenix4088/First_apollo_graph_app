@@ -10,18 +10,18 @@ export const useCustomerAuth = () => {
     username: "",
     password: "",
   });
-  console.log(data)
 
-  const logIn = () => {
-    console.log(form);
-    _logIn({
-      variables: form,
-    });
-  };
+  const logIn = () => _logIn({ variables: form });
+
+  const authorizedCustomer = data && data.logIn;
+  const token = authorizedCustomer && authorizedCustomer.token;
+
+  if (token) localStorage.setItem("token", JSON.stringify(token));
 
   return {
     handleChange,
     logIn,
-    authorizedCustomer: data && data.logIn.customer,
+    authorizedCustomer,
   };
 };
+

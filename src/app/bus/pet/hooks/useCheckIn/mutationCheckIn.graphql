@@ -1,0 +1,9 @@
+mutation checkIn($id: ID!) {
+    checkIn(id: $id) {
+        pet {
+            name
+            id
+        }
+        checkInDate
+    }
+}

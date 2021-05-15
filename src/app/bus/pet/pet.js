@@ -4,13 +4,15 @@ import { List } from "./list";
 import { SpecialList } from "./specialList";
 import styled from "styled-components";
 import { Profile } from "./profile";
-import {CheckInPet} from "./checkInPet";
+import { CheckInPet } from "./checkInPet";
+import { SubscriptionPetList } from "./SubscriptionPetList";
 
 export const Pet = () => {
   return (
     <Wrapper>
       <h1>Pet</h1>
-        <CheckInPet/>
+      <CheckInPet />
+      <SubscriptionPetList />
       <Counter />
       <List />
       <SpecialList />
